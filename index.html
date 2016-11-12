@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Parallel point cloud registration by HanzhouLu</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Parallel point cloud registration</h1>
+        <p class="header">Hanzhou Lu, Yujie Wei | CMU-15618 2016 Fall</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/HanzhouLu/Parallel-Point-Cloud-Registration/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/HanzhouLu/Parallel-Point-Cloud-Registration/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/HanzhouLu/Parallel-Point-Cloud-Registration">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/HanzhouLu">HanzhouLu</a></p>
+
+
+      </header>
+      <section>
+        <h3>
+<a id="summary" class="anchor" href="#summary" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SUMMARY</h3>
+
+<p>In this project, we plan to parallelize the Iterative Closest Point (ICP) registration algorithm for point
+cloud processing system using the NVIDIA CUDA library.</p>
+
+<h3>
+<a id="algorithm" class="anchor" href="#algorithm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ALGORITHM</h3>
+
+<p>Point Cloud Registration (PCR) plays an important role in computer vision since a well-aligned point
+cloud model is the bedrock for many subsequent applications such as Simultaneous Localization and
+Mapping (SLAM) in the robotics and autonomous cars domain or Automatic Building Information
+Modeling in the architectural industry. Nowadays, point clouds are usually gathered by multiple
+cameras or laser scanners with their own coordinate systems. The objective of Point Cloud Registration
+(PCR) is to search a transformation that could align a reading point cloud with a reference point cloud in
+a consistent coordinate system. The process of finding the transformation and the closest point
+involves lots of matrix operations that are usually independent between each other. Given the intermediate
+level of dependency and the huge size of the problem, exploiting the parallelism can be a good
+alternative to speed up the algorithm.</p>
+
+<h3>
+<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can @mention a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
