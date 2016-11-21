@@ -109,6 +109,24 @@ CPU and CUDA.</p>
 <p>We choose CUDA as our parallel library because shared memory space in NVIDIA GPUs can be used as a programmable cache. It allows us to cache specific data which is quite helpful while doing matrix calculation. For a specific problem like matrix multiplication, the support for programmable cache and vector intrinsic will allow us more space to perform delicate tuning and get better performance.</p>
 
 <h3>
+<a id="platform-choice" class="anchor" href="#platform-choice" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MIDWAY UPDATE</h3>
+
+<p>We have achieved most of the goals set in our proposal on time. First, we read several papers to figure out the algorithm and selected the equal-point optimization algorithm as our choice. The advantage of the equal-point algorithm is that it’s much more accurate than the equal-plane one. However, it also means much more computation which allows for a huge space for parallel improvement. Second, we have successfully implemented the sequential version of the point cloud registration program. Figure 1 shows how two point clouds with different coordinate systems (Left) can be perfectly aligned through automatic registration (Right). To establish a reasonable baseline for the project, we mimic the industry standard relying on Eigen, a highly-optimized matrix library that could provide a pretty good speed on modern CPUs. In a point cloud which contains 40,256 points, the serial program took about 80 iterations to converge with approximately 2.5 seconds per loop. Third, we profiled the program and realized that most of the time was spent on finding the matching pairs. Therefore, OpenMP library was introduced to parallelize the brute force point matching algorithm and achieve a 5.2x speedup on an Intel 4-core i7-4870HQ CPU. Since we successfully completed the goals set in the proposal, we believed that we should be able to produce the deliverables on the poster session. </p>
+
+<p>Though the program works well in the test dataset, there are still many optimizations such as finding outliers, accelerating the match searching, extrapolation, and handling multiple scans that we can do to provide a better result in a shorter time. We will solve these problems in our next step. The final version of our code will be a parallel IPC program implemented on NVIDIA GPUs. Parallelized modules include match searching, coordinate normalization, motion decomposition and so on.</p>
+
+<p>The goals of the final project are listed below:</p>
+<p>
+  <ul>
+    <li>- A parallel version of matching that supports fast search of point pairs.</li>
+    <li>- A parallel version pre-processing module to vexolize the point cloud so as to decrease the amount of computation.</li>
+    <li>- Implement the extrapolation and outlier removal module to increase the accuracy of the program.</li>
+    <li>- Visualized output.</li>
+  </ul>
+</p>
+<p>The detailed plan can be found on the schedule part.</p>
+
+<h3>
 <a id="reference" class="anchor" href="#reference" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>REFERENCE</h3>
 
 <p>Besl, Paul J.; N.D. McKay (1992). "A Method for Registration of 3-D Shapes". IEEE Trans. on Pattern Analysis and Machine Intelligence. Los Alamitos, CA, USA: IEEE Computer Society. 14 (2): 239–256. doi:10.1109/34.121791</p>
@@ -124,6 +142,6 @@ CPU and CUDA.</p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
+        
   </body>
 </html>
