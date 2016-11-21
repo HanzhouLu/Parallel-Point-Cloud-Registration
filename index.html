@@ -127,6 +127,64 @@ CPU and CUDA.</p>
 <p>The detailed plan can be found on the schedule part.</p>
 
 <h3>
+<a id="platform-choice" class="anchor" href="#platform-choice" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Work Completed</h3>
+<p>
+  <ul>
+    <li>Read paper about ICP and choose the Stanford 3D scanning repository as our dataset.</li>
+    <li>Parse PLY file and process the large point cloud into small voxels.</li>
+    <li>Find the matches of closest points in two different point clouds.</li>
+    <li>• Normalize two coordinates and do the motion decomposition optimization.</li>
+    <li>Implement the OpenMP parallel version of code on the CPU (Single node).</li>
+  </ul>
+</p>
+
+
+<h3>
+<a id="platform-choice" class="anchor" href="#platform-choice" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Schedule</h3>
+<table>
+  <tr>
+    <th>Task</th>
+    <th>Period</th>
+    <th>Person in charge</th>
+  </tr>
+  <tr>
+    <td>Parallelize Point Matching</td>
+    <td>11/22/2016 - 11/26/2016</td>
+    <td>Hanzhou Lu</td>
+  </tr>
+  <tr>
+    <td>Implement Outlier Finding</td>
+    <td>11/22/2016 - 11/26/2016</td>
+    <td>Yujie Wei</td>
+  </tr>
+  <tr>
+    <td>Parallelize Coordinate Normalization</td>
+    <td>11/27/2016 - 12/01/2016</td>
+    <td>Hanzhou Lu</td>
+  </tr>
+  <tr>
+    <td>Parallelize Singular Value Decomposition</td>
+    <td>11/27/2016 - 12/01/2016</td>
+    <td>Yujie Wei</td>
+  </tr>
+  <tr>
+    <td>Optimize #cores and #warps on NVIDIA GPUs</td>
+    <td>12/02/2016 - 12/08/2016</td>
+    <td>Hanzhou Lu and Yujie Wei</td>
+  </tr>
+  <tr>
+    <td>Optimize Cache Locality</td>
+    <td>12/02/2016 - 12/08/2016</td>
+    <td>Hanzhou Lu and Yujie Wei</td>
+  </tr>
+  <tr>
+    <td>Final Write-up and Poster</td>
+    <td>12/09/2016 - 12/12/2016</td>
+    <td>Hanzhou Lu and Yujie Wei</td>
+  </tr>
+</table>
+
+<h3>
 <a id="reference" class="anchor" href="#reference" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>REFERENCE</h3>
 
 <p>Besl, Paul J.; N.D. McKay (1992). "A Method for Registration of 3-D Shapes". IEEE Trans. on Pattern Analysis and Machine Intelligence. Los Alamitos, CA, USA: IEEE Computer Society. 14 (2): 239–256. doi:10.1109/34.121791</p>
