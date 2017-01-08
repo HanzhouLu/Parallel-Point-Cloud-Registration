@@ -22,11 +22,9 @@ pcip-|-data
 Then you are good to make runnable file.
 
 Evironment requirement:
-
+```
 GCC 5.0 or above
-
 OpenMP
-
 CUDA 7.5
-
-Hope you enjoy it!
+```
+**Hope you enjoy it!**
