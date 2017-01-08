@@ -7,25 +7,23 @@ All cource code(not including libraries) and data sets are provided in PICP fold
 To run our program, you need to download Eigen 3.1.3(or above) and boost 1.62.0(or above) and save them in picp/library
 
 Folder strucure should like:
-pcip-|-data
 
+pcip-|-data
      |-library-|-boost_1_62_0
-     
      |         |-eigen
-     
      |-src-|-icp.cpp
-     
      |     |-icp.cu
-     
      |     |-kdTree.cpp
-     
      |-Makefile
      
 Then you are good to make runnable file.
 
 Evironment requirement:
+
 GCC 5.0 or above
+
 OpenMP
+
 CUDA 7.5
 
 Hope you enjoy it!
